@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD57437c402129a1105d8726900257f579</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>085c1636875291103844b8c4dabb3533</scope_name>
+        <serialized_content>{"FlowDesigner:FD57437c402129a1105d8726900257f579":{"$COCollectionField":[{"Changed_Field":{"Field_Name":"String","Field_Name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"Previous_Value":"String","Previous_Value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"Current_Value":"String","Current_Value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"Current_Display_Value":"String","Current_Display_Value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"Previous_Display_Value":"String","Previous_Display_Value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"Changed_Field\",\"uiUniqueId\":\"1dfab5ac-f68b-4e54-8dec-a1ab5511b223\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD57437c402129a1105d8726900257f579\",\"child_label\":\"Changed Field\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"951d5605-dddb-4c1f-b936-df872d40f58e\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD57437c402129a1105d8726900257f579.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"Changed_Field\",\"uiUniqueId\":\"1dfab5ac-f68b-4e54-8dec-a1ab5511b223\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD57437c402129a1105d8726900257f579\",\"child_label\":\"Changed Field\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"951d5605-dddb-4c1f-b936-df872d40f58e\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>Nishanth</sys_created_by>
+        <sys_created_on>2023-03-08 05:23:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2b437c40c329a110d10cf44ed4013179</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FD57437c402129a1105d8726900257f579</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_complex_object_2b437c40c329a110d10cf44ed4013179</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-03-13 04:14:17</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
