@@ -8,9 +8,20 @@
         <category/>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Create a supplier in SAP ECC.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inputs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Supplier Details&lt;/strong&gt; - Referenced to Supplier Details&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Account Group&lt;/strong&gt; - String input needed for SAP ECC.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Outputs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; - Will be set to "1", if the request is "Success" or will be set to "2", if the request is "Error”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>create_supplier_in_sap_ecc_v2</internal_name>
-        <label_cache>[{"name":"subflow.supplier_details.gl_account.gl_account","label":"Input➛Supplier Details➛General ledger account➛Ledger account","reference":"","reference_display":"Ledger account","type":"string","base_type":"string","parent_table_name":"sn_fin_gl_account","column_name":"gl_account"},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.vendor","label":"10 - Create Vendor➛Vendor","reference_display":"Vendor","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"fc62ac95-90ea-41b1-91d1-9c2e80bb3a05"}},{"name":"subflow.supplier_details.payment_term.payment_term","label":"Input➛Supplier Details➛Payment term➛Payment term","reference":"","reference_display":"Payment term","type":"string","base_type":"string","parent_table_name":"sn_shop_payment_term","column_name":"payment_term"},{"name":"subflow.supplier_details","label":"Input➛Supplier Details","reference":"sn_fin_supplier_detail","reference_display":"Supplier Legal Entity Mapping","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"048936e1-cafe-45a9-a6cf-30fc1024f0fa","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.fax_phone","label":"1➛Supplier Location Record➛Location➛Fax phone","reference":"","reference_display":"Fax phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"fax_phone"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.phone","label":"1➛Supplier Location Record➛Location➛Phone","reference":"","reference_display":"Phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"phone"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.state","label":"1➛Supplier Location Record➛Location➛State / Province","reference":"","reference_display":"State / Province","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"state"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.zip","label":"1➛Supplier Location Record➛Location➛Zip / Postal Code","reference":"","reference_display":"Zip / Postal Code","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"zip"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.city","label":"1➛Supplier Location Record➛Location➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"city"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.street","label":"1➛Supplier Location Record➛Location➛Street","reference":"","reference_display":"Street","type":"multi_two_lines","base_type":"multi_two_lines","parent_table_name":"cmn_location","column_name":"street"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.country","label":"1➛Supplier Location Record➛Location➛Country","reference":"","reference_display":"Country","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"country"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.status","label":"1 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"subflow.supplier_details.supplier","label":"Input➛Supplier Details➛Supplier","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","parent_table_name":"sn_fin_supplier_detail","column_name":"supplier"},{"name":"subflow.supplier_details.legal_entity.erp_company_code","label":"Input➛Supplier Details➛Legal entity➛ERP company code","reference":"","reference_display":"ERP company code","type":"string","base_type":"string","parent_table_name":"sn_fin_legal_entity","column_name":"erp_company_code"},{"name":"subflow.account_group","label":"Input➛Account Group","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"509f5fe2-ee97-4167-8cc8-79cbad7a4b25","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.supplier_details.supplier.legal_name","label":"Input➛Supplier Details➛Supplier➛Legal name","reference":"","reference_display":"Legal name","type":"string","base_type":"string","parent_table_name":"sn_fin_supplier","column_name":"legal_name"},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.status","label":"10 - Create Vendor➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2334eb9-1f80-4d20-8316-74366f8b05ac"}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.error_message","label":"10 - Create Vendor➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cca22d63-4f20-4acd-9014-68d03669d12e"}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.status","label":"18 - Create Vendor➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2334eb9-1f80-4d20-8316-74366f8b05ac"}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.error_message","label":"18 - Create Vendor➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cca22d63-4f20-4acd-9014-68d03669d12e"}},{"name":"subflow.master_error_id","label":"Input➛Master Error ID","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"dad1cff2-7eae-461f-b1bd-26777e2cdfae"}},{"name":"3d9bf1f6-9d83-4a58-a7bd-9cc464000ede.__status__.message","label":"21➛Error Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.__action_status__.code","label":"18➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.__action_status__.code","label":"10➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"3094f6cb-58bf-4ade-8edf-9c7c8bad9219.__action_status__.code","label":"15 - Update Record➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"3094f6cb-58bf-4ade-8edf-9c7c8bad9219.__action_status__.message","label":"15 - Update Record➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}}]</label_cache>
+        <label_cache>[{"name":"3094f6cb-58bf-4ade-8edf-9c7c8bad9219.__action_status__.message","label":"15 - Update Record➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"3094f6cb-58bf-4ade-8edf-9c7c8bad9219.__action_status__.code","label":"15 - Update Record➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.__action_status__.code","label":"10➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.__action_status__.code","label":"18➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"3d9bf1f6-9d83-4a58-a7bd-9cc464000ede.__status__.message","label":"21➛Error Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"subflow.master_error_id","label":"Input➛Master Error ID","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"dad1cff2-7eae-461f-b1bd-26777e2cdfae"}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.error_message","label":"18 - Create Vendor➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cca22d63-4f20-4acd-9014-68d03669d12e"}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.status","label":"18 - Create Vendor➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2334eb9-1f80-4d20-8316-74366f8b05ac"}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.error_message","label":"10 - Create Vendor➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cca22d63-4f20-4acd-9014-68d03669d12e"}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.status","label":"10 - Create Vendor➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2334eb9-1f80-4d20-8316-74366f8b05ac"}},{"name":"subflow.supplier_details.supplier.legal_name","label":"Input➛Supplier Details➛Supplier➛Legal name","reference":"","reference_display":"Legal name","type":"string","base_type":"string","parent_table_name":"sn_fin_supplier","column_name":"legal_name"},{"name":"subflow.account_group","label":"Input➛Account Group","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"509f5fe2-ee97-4167-8cc8-79cbad7a4b25","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.supplier_details.legal_entity.erp_company_code","label":"Input➛Supplier Details➛Legal entity➛ERP company code","reference":"","reference_display":"ERP company code","type":"string","base_type":"string","parent_table_name":"sn_fin_legal_entity","column_name":"erp_company_code"},{"name":"subflow.supplier_details.supplier","label":"Input➛Supplier Details➛Supplier","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","parent_table_name":"sn_fin_supplier_detail","column_name":"supplier"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.status","label":"1 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.country","label":"1➛Supplier Location Record➛Location➛Country","reference":"","reference_display":"Country","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"country"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.street","label":"1➛Supplier Location Record➛Location➛Street","reference":"","reference_display":"Street","type":"multi_two_lines","base_type":"multi_two_lines","parent_table_name":"cmn_location","column_name":"street"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.city","label":"1➛Supplier Location Record➛Location➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"city"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.zip","label":"1➛Supplier Location Record➛Location➛Zip / Postal Code","reference":"","reference_display":"Zip / Postal Code","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"zip"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.state","label":"1➛Supplier Location Record➛Location➛State / Province","reference":"","reference_display":"State / Province","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"state"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.phone","label":"1➛Supplier Location Record➛Location➛Phone","reference":"","reference_display":"Phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"phone"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.fax_phone","label":"1➛Supplier Location Record➛Location➛Fax phone","reference":"","reference_display":"Fax phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"fax_phone"},{"name":"subflow.supplier_details","label":"Input➛Supplier Details","reference":"sn_fin_supplier_detail","reference_display":"Supplier Legal Entity Mapping","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"048936e1-cafe-45a9-a6cf-30fc1024f0fa","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.supplier_details.payment_term.payment_term","label":"Input➛Supplier Details➛Payment term➛Payment term","reference":"","reference_display":"Payment term","type":"string","base_type":"string","parent_table_name":"sn_shop_payment_term","column_name":"payment_term"},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.vendor","label":"10 - Create Vendor➛Vendor","reference_display":"Vendor","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"fc62ac95-90ea-41b1-91d1-9c2e80bb3a05"}},{"name":"subflow.supplier_details.gl_account.gl_account","label":"Input➛Supplier Details➛General ledger account➛Ledger account","reference":"","reference_display":"Ledger account","type":"string","base_type":"string","parent_table_name":"sn_fin_gl_account","column_name":"gl_account"}]</label_cache>
         <master_snapshot>143eaaae874a651024ecfc86dabb35a0</master_snapshot>
         <name>Create Supplier in SAP ECC V2</name>
         <natlang/>
@@ -37,7 +48,7 @@
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_update_name>sys_hub_flow_70cb5a2a870a651024ecfc86dabb35d1</sys_update_name>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 04:14:41</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:42:44</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=70cb5a2a870a651024ecfc86dabb35d1"/>
@@ -455,14 +466,14 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:02:44</sys_created_on>
         <sys_id>8b3d96aa870a651024ecfc86dabb3546</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -491,10 +502,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:18:51</sys_created_on>
         <sys_id>0fe06eee870a651024ecfc86dabb3564</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>5456b20d-ae07-4fd4-9e2d-9400a344c2bb</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0fe06eee870a651024ecfc86dabb3564"/>
@@ -631,10 +642,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:31:26</sys_created_on>
         <sys_id>67c3aea2874a651024ecfc86dabb3542</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:30</sys_updated_on>
         <ui_id>8d7a1e50-2098-437b-8c0b-1ec903856dee</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=67c3aea2874a651024ecfc86dabb3542"/>
@@ -719,10 +730,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 09:59:41</sys_created_on>
         <sys_id>fbee23aa878e651024ecfc86dabb358f</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>3094f6cb-58bf-4ade-8edf-9c7c8bad9219</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=fbee23aa878e651024ecfc86dabb358f"/>
@@ -803,10 +814,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:13:35</sys_created_on>
         <sys_id>017dea6e874a651024ecfc86dabb35d5</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>43134126-ab3b-4e22-91a2-f96b7f49d2df</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -849,10 +860,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:02:44</sys_created_on>
         <sys_id>033d96aa870a651024ecfc86dabb3550</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>9cd0f9b1-4e8e-47f4-b00a-40bf60dead0d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -895,10 +906,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:22</sys_created_on>
         <sys_id>05624a5687ee2110ecfb322e0ebb358a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>0d2c79e2-beb5-42b0-96ab-ff64e426718a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -928,10 +939,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:23</sys_created_on>
         <sys_id>11624a5687ee2110ecfb322e0ebb359b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:44</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>462462e7-aa43-4519-8c1d-9765e65b3c58</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -961,10 +972,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:23</sys_created_on>
         <sys_id>19624a5687ee2110ecfb322e0ebb359d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:44</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>8ad50587-7c9f-4e69-bc3d-b90cce1db5ea</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1008,10 +1019,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:54:39</sys_created_on>
         <sys_id>26d6322a878a651024ecfc86dabb350c</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:30</sys_updated_on>
         <ui_id>a9e01785-216a-4b3c-a9b6-639475683ea1</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1042,10 +1053,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:31:26</sys_created_on>
         <sys_id>27c3aea2874a651024ecfc86dabb354b</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:30</sys_updated_on>
         <ui_id>98ee3b7f-5b56-42cb-b601-c39b2b6d7afa</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1088,10 +1099,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:13:35</sys_created_on>
         <sys_id>457dea6e874a651024ecfc86dabb35d8</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>da917312-dde9-4d1a-af46-80af22c1e907</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1121,10 +1132,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:13:36</sys_created_on>
         <sys_id>4d7dea6e874a651024ecfc86dabb35da</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>d201a084-4457-472f-b1d6-a90e7133e9ee</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1154,10 +1165,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:13:37</sys_created_on>
         <sys_id>517d2e6e874a651024ecfc86dabb3529</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>2b120a45-e408-4e83-ba3b-ccef46942358</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1187,10 +1198,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:31:26</sys_created_on>
         <sys_id>67c3aea2874a651024ecfc86dabb3554</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>d9db6702-f289-44b6-ae3d-207bc5e4e05b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1221,10 +1232,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:31:26</sys_created_on>
         <sys_id>6fc3aea2874a651024ecfc86dabb3546</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:30</sys_updated_on>
         <ui_id>1d091032-a6ef-4de5-b1df-f89bed026853</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1293,10 +1304,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:31:26</sys_created_on>
         <sys_id>6fc3aea2874a651024ecfc86dabb3551</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>573deba0-68b2-4c02-8228-ca87763d5e5f</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1326,10 +1337,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:31:27</sys_created_on>
         <sys_id>6fc3aea2874a651024ecfc86dabb3556</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>5c8542b2-f97a-487f-87cf-04abc4c2e156</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1374,10 +1385,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:22</sys_created_on>
         <sys_id>89624a5687ee2110ecfb322e0ebb3586</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>925c4aca-6d0e-44f0-bbce-af42fb6219ae</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1419,10 +1430,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:54:41</sys_created_on>
         <sys_id>8bd6322a878a651024ecfc86dabb35be</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:44</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>3d9bf1f6-9d83-4a58-a7bd-9cc464000ede</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1481,10 +1492,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:13:37</sys_created_on>
         <sys_id>917d2e6e874a651024ecfc86dabb3526</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>119d43b1-703f-41cc-b586-07fe8b882d42</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1528,10 +1539,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:13:37</sys_created_on>
         <sys_id>997d2e6e874a651024ecfc86dabb3523</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>65b5cd30-47bd-4d2c-ac57-06789b8c0572</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1562,10 +1573,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:13:35</sys_created_on>
         <sys_id>c57dea6e874a651024ecfc86dabb35d1</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>9ee32024-86d9-49b1-af22-b98c8eb26144</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1609,10 +1620,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:13:36</sys_created_on>
         <sys_id>c57dea6e874a651024ecfc86dabb35e6</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>d2d47035-35d0-41c2-87a0-2010e2488f2b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1656,10 +1667,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:54:41</sys_created_on>
         <sys_id>cfd6322a878a651024ecfc86dabb35c2</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:44</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>d9872020-1a72-4790-a276-3645b25f63d5</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1701,10 +1712,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:23</sys_created_on>
         <sys_id>dd624a5687ee2110ecfb322e0ebb35a0</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:44</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:32</sys_updated_on>
         <ui_id>eaeebf39-1095-4d81-bae5-e567a14d350e</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1734,10 +1745,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:31:26</sys_created_on>
         <sys_id>e3c3aea2874a651024ecfc86dabb354e</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>cae24768-0906-4a20-92f5-cef940a8808d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1781,10 +1792,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 04:31:27</sys_created_on>
         <sys_id>efc3aea2874a651024ecfc86dabb3559</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:43</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:31</sys_updated_on>
         <ui_id>5eddcf0a-667f-408d-bcd7-f50f7820a5b9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1836,7 +1847,7 @@
         <sys_package display_value="Supplier Lifecycle Operations Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
         <sys_policy/>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_70cb5a2a870a651024ecfc86dabb35d1_master_error_id_en</sys_update_name>
         <sys_updated_by>Prama</sys_updated_by>
         <sys_updated_on>2023-04-10 05:13:34</sys_updated_on>
         <url/>
@@ -1959,7 +1970,7 @@
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=70cb5a2a870a651024ecfc86dabb35d1"/>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=70cb5a2a870a651024ecfc86dabb35d1^sys_idNOT INb53e2eae874a651024ecfc86dabb35c5"/>
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
-        <plan>com.snc.process_flow.engine.ProcessPlan@ea0afa</plan>
+        <plan>com.snc.process_flow.engine.ProcessPlan@1e7499b</plan>
         <plan_id display_value="Create Supplier in SAP ECC V2">70cb5a2a870a651024ecfc86dabb35d1</plan_id>
         <snapshot>143eaaae874a651024ecfc86dabb35a0</snapshot>
         <sys_created_by>Prama</sys_created_by>
@@ -1967,11 +1978,11 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b53e2eae874a651024ecfc86dabb35c5</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:42</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:30</sys_updated_on>
     </sys_flow_subflow_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1982,9 +1993,20 @@
         <category/>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Create a supplier in SAP ECC.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Inputs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Supplier Details&lt;/strong&gt; - Referenced to Supplier Details&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Account Group&lt;/strong&gt; - String input needed for SAP ECC.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Outputs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; - Will be set to "1", if the request is "Success" or will be set to "2", if the request is "Error”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error&lt;/strong&gt; - Reason for error. Populated only when an error occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>create_supplier_in_sap_ecc_v2</internal_name>
-        <label_cache>[{"name":"subflow.supplier_details.gl_account.gl_account","label":"Input➛Supplier Details➛General ledger account➛Ledger account","reference":"","reference_display":"Ledger account","type":"string","base_type":"string","parent_table_name":"sn_fin_gl_account","column_name":"gl_account"},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.vendor","label":"10 - Create Vendor➛Vendor","reference_display":"Vendor","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"fc62ac95-90ea-41b1-91d1-9c2e80bb3a05"}},{"name":"subflow.supplier_details.payment_term.payment_term","label":"Input➛Supplier Details➛Payment term➛Payment term","reference":"","reference_display":"Payment term","type":"string","base_type":"string","parent_table_name":"sn_shop_payment_term","column_name":"payment_term"},{"name":"subflow.supplier_details","label":"Input➛Supplier Details","reference":"sn_fin_supplier_detail","reference_display":"Supplier Legal Entity Mapping","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"048936e1-cafe-45a9-a6cf-30fc1024f0fa","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.fax_phone","label":"1➛Supplier Location Record➛Location➛Fax phone","reference":"","reference_display":"Fax phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"fax_phone"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.phone","label":"1➛Supplier Location Record➛Location➛Phone","reference":"","reference_display":"Phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"phone"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.state","label":"1➛Supplier Location Record➛Location➛State / Province","reference":"","reference_display":"State / Province","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"state"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.zip","label":"1➛Supplier Location Record➛Location➛Zip / Postal Code","reference":"","reference_display":"Zip / Postal Code","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"zip"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.city","label":"1➛Supplier Location Record➛Location➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"city"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.street","label":"1➛Supplier Location Record➛Location➛Street","reference":"","reference_display":"Street","type":"multi_two_lines","base_type":"multi_two_lines","parent_table_name":"cmn_location","column_name":"street"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.country","label":"1➛Supplier Location Record➛Location➛Country","reference":"","reference_display":"Country","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"country"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.status","label":"1 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"subflow.supplier_details.supplier","label":"Input➛Supplier Details➛Supplier","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","parent_table_name":"sn_fin_supplier_detail","column_name":"supplier"},{"name":"subflow.supplier_details.legal_entity.erp_company_code","label":"Input➛Supplier Details➛Legal entity➛ERP company code","reference":"","reference_display":"ERP company code","type":"string","base_type":"string","parent_table_name":"sn_fin_legal_entity","column_name":"erp_company_code"},{"name":"subflow.account_group","label":"Input➛Account Group","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"509f5fe2-ee97-4167-8cc8-79cbad7a4b25","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.supplier_details.supplier.legal_name","label":"Input➛Supplier Details➛Supplier➛Legal name","reference":"","reference_display":"Legal name","type":"string","base_type":"string","parent_table_name":"sn_fin_supplier","column_name":"legal_name"},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.status","label":"10 - Create Vendor➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2334eb9-1f80-4d20-8316-74366f8b05ac"}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.error_message","label":"10 - Create Vendor➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cca22d63-4f20-4acd-9014-68d03669d12e"}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.status","label":"18 - Create Vendor➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2334eb9-1f80-4d20-8316-74366f8b05ac"}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.error_message","label":"18 - Create Vendor➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cca22d63-4f20-4acd-9014-68d03669d12e"}},{"name":"subflow.master_error_id","label":"Input➛Master Error ID","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"dad1cff2-7eae-461f-b1bd-26777e2cdfae"}},{"name":"3d9bf1f6-9d83-4a58-a7bd-9cc464000ede.__status__.message","label":"21➛Error Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.__action_status__.code","label":"18➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.__action_status__.code","label":"10➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"3094f6cb-58bf-4ade-8edf-9c7c8bad9219.__action_status__.code","label":"15 - Update Record➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"3094f6cb-58bf-4ade-8edf-9c7c8bad9219.__action_status__.message","label":"15 - Update Record➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}}]</label_cache>
+        <label_cache>[{"name":"3094f6cb-58bf-4ade-8edf-9c7c8bad9219.__action_status__.message","label":"15 - Update Record➛Action Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"3094f6cb-58bf-4ade-8edf-9c7c8bad9219.__action_status__.code","label":"15 - Update Record➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.__action_status__.code","label":"10➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.__action_status__.code","label":"18➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"3d9bf1f6-9d83-4a58-a7bd-9cc464000ede.__status__.message","label":"21➛Error Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"subflow.master_error_id","label":"Input➛Master Error ID","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"dad1cff2-7eae-461f-b1bd-26777e2cdfae"}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.error_message","label":"18 - Create Vendor➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cca22d63-4f20-4acd-9014-68d03669d12e"}},{"name":"2e0e13a4-35ae-4c2e-972a-06444d392080.status","label":"18 - Create Vendor➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2334eb9-1f80-4d20-8316-74366f8b05ac"}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.error_message","label":"10 - Create Vendor➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"cca22d63-4f20-4acd-9014-68d03669d12e"}},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.status","label":"10 - Create Vendor➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"success","order":0.0},{"label":"Error","value":"error","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2334eb9-1f80-4d20-8316-74366f8b05ac"}},{"name":"subflow.supplier_details.supplier.legal_name","label":"Input➛Supplier Details➛Supplier➛Legal name","reference":"","reference_display":"Legal name","type":"string","base_type":"string","parent_table_name":"sn_fin_supplier","column_name":"legal_name"},{"name":"subflow.account_group","label":"Input➛Account Group","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"509f5fe2-ee97-4167-8cc8-79cbad7a4b25","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.supplier_details.legal_entity.erp_company_code","label":"Input➛Supplier Details➛Legal entity➛ERP company code","reference":"","reference_display":"ERP company code","type":"string","base_type":"string","parent_table_name":"sn_fin_legal_entity","column_name":"erp_company_code"},{"name":"subflow.supplier_details.supplier","label":"Input➛Supplier Details➛Supplier","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","parent_table_name":"sn_fin_supplier_detail","column_name":"supplier"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.status","label":"1 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.country","label":"1➛Supplier Location Record➛Location➛Country","reference":"","reference_display":"Country","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"country"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.street","label":"1➛Supplier Location Record➛Location➛Street","reference":"","reference_display":"Street","type":"multi_two_lines","base_type":"multi_two_lines","parent_table_name":"cmn_location","column_name":"street"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.city","label":"1➛Supplier Location Record➛Location➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"city"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.zip","label":"1➛Supplier Location Record➛Location➛Zip / Postal Code","reference":"","reference_display":"Zip / Postal Code","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"zip"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.state","label":"1➛Supplier Location Record➛Location➛State / Province","reference":"","reference_display":"State / Province","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"state"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.phone","label":"1➛Supplier Location Record➛Location➛Phone","reference":"","reference_display":"Phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"phone"},{"name":"8d7a1e50-2098-437b-8c0b-1ec903856dee.Record.location.fax_phone","label":"1➛Supplier Location Record➛Location➛Fax phone","reference":"","reference_display":"Fax phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"fax_phone"},{"name":"subflow.supplier_details","label":"Input➛Supplier Details","reference":"sn_fin_supplier_detail","reference_display":"Supplier Legal Entity Mapping","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"048936e1-cafe-45a9-a6cf-30fc1024f0fa","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.supplier_details.payment_term.payment_term","label":"Input➛Supplier Details➛Payment term➛Payment term","reference":"","reference_display":"Payment term","type":"string","base_type":"string","parent_table_name":"sn_shop_payment_term","column_name":"payment_term"},{"name":"5456b20d-ae07-4fd4-9e2d-9400a344c2bb.vendor","label":"10 - Create Vendor➛Vendor","reference_display":"Vendor","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"fc62ac95-90ea-41b1-91d1-9c2e80bb3a05"}},{"name":"subflow.supplier_details.gl_account.gl_account","label":"Input➛Supplier Details➛General ledger account➛Ledger account","reference":"","reference_display":"Ledger account","type":"string","base_type":"string","parent_table_name":"sn_fin_gl_account","column_name":"gl_account"}]</label_cache>
         <master>true</master>
         <name>Create Supplier in SAP ECC V2</name>
         <natlang/>
@@ -2001,7 +2023,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>143eaaae874a651024ecfc86dabb35a0</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2009,7 +2031,7 @@
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:37</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=143eaaae874a651024ecfc86dabb35a0"/>
@@ -2344,14 +2366,14 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:50</sys_created_on>
         <sys_id>6c3eeaae874a651024ecfc86dabb3510</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:35</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2463,10 +2485,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:52</sys_created_on>
         <sys_id>093eeaae874a651024ecfc86dabb356f</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:35</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>8d7a1e50-2098-437b-8c0b-1ec903856dee</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=093eeaae874a651024ecfc86dabb356f"/>
@@ -2551,10 +2573,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 09:59:52</sys_created_on>
         <sys_id>2afee3aa878e651024ecfc86dabb3586</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>3094f6cb-58bf-4ade-8edf-9c7c8bad9219</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2afee3aa878e651024ecfc86dabb3586"/>
@@ -2625,10 +2647,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:52</sys_created_on>
         <sys_id>c53eeaae874a651024ecfc86dabb35a1</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>5456b20d-ae07-4fd4-9e2d-9400a344c2bb</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c53eeaae874a651024ecfc86dabb35a1"/>
@@ -2760,10 +2782,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:34</sys_created_on>
         <sys_id>00724e5687ee2110ecfb322e0ebb3533</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:37</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>462462e7-aa43-4519-8c1d-9765e65b3c58</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2793,10 +2815,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:35</sys_created_on>
         <sys_id>0c724e5687ee2110ecfb322e0ebb3538</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:37</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>eaeebf39-1095-4d81-bae5-e567a14d350e</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2827,10 +2849,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>383eeaae874a651024ecfc86dabb3546</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>d2d47035-35d0-41c2-87a0-2010e2488f2b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2873,10 +2895,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:52</sys_created_on>
         <sys_id>383eeaae874a651024ecfc86dabb355d</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>65b5cd30-47bd-4d2c-ac57-06789b8c0572</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2906,10 +2928,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:34</sys_created_on>
         <sys_id>48724e5687ee2110ecfb322e0ebb3535</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:37</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>8ad50587-7c9f-4e69-bc3d-b90cce1db5ea</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2953,10 +2975,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:34</sys_created_on>
         <sys_id>4c724e5687ee2110ecfb322e0ebb3521</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>0d2c79e2-beb5-42b0-96ab-ff64e426718a</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2987,10 +3009,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>603eeaae874a651024ecfc86dabb3522</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:35</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>1d091032-a6ef-4de5-b1df-f89bed026853</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3060,10 +3082,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>643eeaae874a651024ecfc86dabb3526</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:35</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>98ee3b7f-5b56-42cb-b601-c39b2b6d7afa</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3106,10 +3128,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:52</sys_created_on>
         <sys_id>703eeaae874a651024ecfc86dabb3560</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:37</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>119d43b1-703f-41cc-b586-07fe8b882d42</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3153,10 +3175,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:52</sys_created_on>
         <sys_id>703eeaae874a651024ecfc86dabb3563</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:37</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>2b120a45-e408-4e83-ba3b-ccef46942358</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3186,10 +3208,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>743eeaae874a651024ecfc86dabb3529</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:35</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>cae24768-0906-4a20-92f5-cef940a8808d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3234,10 +3256,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:54:53</sys_created_on>
         <sys_id>79e6362a878a651024ecfc86dabb3513</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:37</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>d9872020-1a72-4790-a276-3645b25f63d5</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3279,10 +3301,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>7c3eeaae874a651024ecfc86dabb3535</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>5eddcf0a-667f-408d-bcd7-f50f7820a5b9</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3313,10 +3335,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-05-04 03:58:34</sys_created_on>
         <sys_id>84724e5687ee2110ecfb322e0ebb351e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>925c4aca-6d0e-44f0-bbce-af42fb6219ae</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3358,10 +3380,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>b03eeaae874a651024ecfc86dabb352d</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:35</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>573deba0-68b2-4c02-8228-ca87763d5e5f</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3392,10 +3414,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>b43eeaae874a651024ecfc86dabb3538</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>9cd0f9b1-4e8e-47f4-b00a-40bf60dead0d</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3439,10 +3461,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>b43eeaae874a651024ecfc86dabb353b</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>9ee32024-86d9-49b1-af22-b98c8eb26144</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3486,10 +3508,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>b43eeaae874a651024ecfc86dabb353e</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>43134126-ab3b-4e22-91a2-f96b7f49d2df</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3531,10 +3553,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>b43eeaae874a651024ecfc86dabb3541</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>da917312-dde9-4d1a-af46-80af22c1e907</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3564,10 +3586,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>b83eeaae874a651024ecfc86dabb3532</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>5c8542b2-f97a-487f-87cf-04abc4c2e156</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3611,10 +3633,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:54:53</sys_created_on>
         <sys_id>b9e6362a878a651024ecfc86dabb350f</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:37</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:26</sys_updated_on>
         <ui_id>3d9bf1f6-9d83-4a58-a7bd-9cc464000ede</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3673,10 +3695,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>bc3eeaae874a651024ecfc86dabb352f</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>d9db6702-f289-44b6-ae3d-207bc5e4e05b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3706,10 +3728,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:54:51</sys_created_on>
         <sys_id>d1e6f22a878a651024ecfc86dabb3594</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:35</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:24</sys_updated_on>
         <ui_id>a9e01785-216a-4b3c-a9b6-639475683ea1</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3739,10 +3761,10 @@
         <sys_created_by>Prama</sys_created_by>
         <sys_created_on>2023-04-10 05:16:51</sys_created_on>
         <sys_id>fc3eeaae874a651024ecfc86dabb3543</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-05-04 03:58:36</sys_updated_on>
+        <sys_updated_on>2023-05-04 11:23:25</sys_updated_on>
         <ui_id>d201a084-4457-472f-b1d6-a90e7133e9ee</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3794,7 +3816,7 @@
         <sys_package display_value="Supplier Lifecycle Operations Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
         <sys_policy/>
         <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_143eaaae874a651024ecfc86dabb35a0_master_error_id_en</sys_update_name>
         <sys_updated_by>Prama</sys_updated_by>
         <sys_updated_on>2023-04-10 05:16:50</sys_updated_on>
         <url/>
