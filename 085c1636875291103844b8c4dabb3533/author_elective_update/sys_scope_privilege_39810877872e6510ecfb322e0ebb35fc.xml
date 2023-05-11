@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>read</operation>
+        <source_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-05-08 10:26:40</sys_created_on>
+        <sys_id>39810877872e6510ecfb322e0ebb35fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_sap_data_int_supplier_stg</sys_name>
+        <sys_package display_value="Supplier Lifecycle Operations Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_scope_privilege_39810877872e6510ecfb322e0ebb35fc</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-05-08 10:26:40</sys_updated_on>
+        <target_name>sn_sap_data_int_supplier_stg</target_name>
+        <target_scope display_value="Primary Data Integration with SAP">93c7f5cb875a1950fd73642d0ebb3590</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</application>
+        <file_path/>
+        <instance_id>d43f54fddb0169509831ac44d49619bc</instance_id>
+        <instance_name>utahforprama</instance_name>
+        <name>sys_scope_privilege_39810877872e6510ecfb322e0ebb35fc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>read</operation><source_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>Prama</sys_created_by><sys_created_on>2023-05-08 10:26:40</sys_created_on><sys_id>39810877872e6510ecfb322e0ebb35fc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_sap_data_int_supplier_stg</sys_name><sys_package display_value="Supplier Lifecycle Operations Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package><sys_policy/><sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope><sys_update_name>sys_scope_privilege_39810877872e6510ecfb322e0ebb35fc</sys_update_name><sys_updated_by>Prama</sys_updated_by><sys_updated_on>2023-05-08 10:26:40</sys_updated_on><target_name>sn_sap_data_int_supplier_stg</target_name><target_scope display_value="Primary Data Integration with SAP">93c7f5cb875a1950fd73642d0ebb3590</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>1597617637</payload_hash>
+        <record_name>sn_sap_data_int_supplier_stg</record_name>
+        <reverted_from/>
+        <source>da3f77e3872e6510ecfb322e0ebb35c8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-05-08 10:26:40</sys_created_on>
+        <sys_id>80a18877872e6510ecfb322e0ebb3532</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187fae627a30000001</sys_recorded_at>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-05-08 10:26:40</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>c4a18877e72e6510b630bd830ddecf31</update_guid>
+        <update_guid_history>c4a18877e72e6510b630bd830ddecf31:1597617637</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-05-09 03:09:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>17a5bb4db7264abe885d865eb9b96211</sys_id>
+        <sys_metadata>39810877872e6510ecfb322e0ebb35fc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_sap_data_int_supplier_stg</sys_name>
+        <sys_package display_value="Supplier Lifecycle Operations Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Operations Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_scope_delete display_value="">06b0e458e23945cf91f45fbf3ad397d1</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_39810877872e6510ecfb322e0ebb35fc</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_39810877872e6510ecfb322e0ebb35fc">80a18877872e6510ecfb322e0ebb3532</sys_update_version>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-05-09 03:09:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
